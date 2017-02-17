@@ -1,0 +1,14 @@
+INSTALL
+
+npm install -g codeceptjs
+npm install -g webdriverio
+
+curl -L https://github.com/mozilla/geckodriver/releases/download/v0.11.1/geckodriver-v0.11.1-macos.tar.gz | tar xz
+
+Start selenium 
+
+java -jar -Dwebdriver.gecko.driver=./geckodriver selenium-server-standalone-3.0.1.jar
+
+RUN TEST
+
+codeceptjs run --steps 
