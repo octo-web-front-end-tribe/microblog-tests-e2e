@@ -2,13 +2,20 @@ INSTALL
 
 npm install -g codeceptjs
 npm install -g webdriverio
+npm install -g selenium-standalone
+selenium-standalone install
 
-curl -L https://github.com/mozilla/geckodriver/releases/download/v0.11.1/geckodriver-v0.11.1-macos.tar.gz | tar xz
+MODIFY URL TO TEST 
+
+in `codecept.json` file change value of `url` in `WebDriverIO`
 
 Start selenium 
 
-java -jar -Dwebdriver.gecko.driver=./geckodriver selenium-server-standalone-3.0.1.jar
+selenium-standalone start
 
 RUN TEST
 
-codeceptjs run --steps 
+ALL : codeceptjs run --steps 
+SCENARIO WITH LOGIN : codeceptjs run . scenario-2-with-login_test.js --steps
+SCENARIO WITHOUT LOGIN : codeceptjs run . scenario-1-without-login_test.js --steps
+
