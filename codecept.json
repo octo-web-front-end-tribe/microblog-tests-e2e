@@ -4,7 +4,6 @@
   "output": "./output",
   "helpers": {},
   "include": {
-    "I": "./steps_file.js"
   },
   "bootstrap": false,
   "mocha": {},
